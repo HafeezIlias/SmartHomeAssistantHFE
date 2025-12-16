@@ -1,24 +1,26 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useDevices } from '@/shared/contexts/DeviceContext';
 import styles from './CCTVPreview.module.css';
 
 export function CCTVPreview() {
     const { devices } = useDevices();
+    const [showAll, setShowAll] = useState(false);
 
     // Filter all camera devices
-    const cameras = devices.filter(d => d.type === 'camera');
+    const allCameras = devices.filter(d => d.type === 'camera');
+    const displayedCameras = showAll ? allCameras : allCameras.slice(0, 6);
 
     return (
         <div className={styles.container}>
             <div className={styles.header}>
                 <h2 className={styles.heading}>CCTV System</h2>
-                <span className={styles.count}>{cameras.length} Cameras</span>
+                <span className={styles.count}>{allCameras.length} Cameras</span>
             </div>
 
             <div className={styles.grid}>
-                {cameras.map((camera) => (
+                {displayedCameras.map((camera) => (
                     <div key={camera.id} className={styles.cameraCard}>
                         <div className={styles.feed}>
                             <div className={styles.placeholder}>
@@ -40,6 +42,15 @@ export function CCTVPreview() {
                     </div>
                 ))}
             </div>
+
+            {allCameras.length > 6 && (
+                <button
+                    className={styles.toggleButton}
+                    onClick={() => setShowAll(!showAll)}
+                >
+                    {showAll ? 'See Less' : `See More (${allCameras.length - 6} more)`}
+                </button>
+            )}
         </div>
     );
 }

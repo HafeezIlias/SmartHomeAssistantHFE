@@ -128,3 +128,26 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.toggleButton {
+    width: 100%;
+    margin-top: var(--space-4);
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.toggleButton:hover {
+    background: var(--bg-secondary);
+    border-color: var(--text-secondary);
+}
+
+.toggleButton:active {
+    transform: scale(0.98);
+}

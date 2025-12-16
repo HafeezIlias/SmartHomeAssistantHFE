@@ -46,9 +46,3 @@
 .navItem.active svg {
     stroke-width: 2.5px;
 }
-
-@media (min-width: 769px) {
-    .bottomNav {
-        display: none;
-    }
-}

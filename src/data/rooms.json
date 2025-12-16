@@ -1,0 +1,77 @@
+[
+    {
+        "id": "living-room",
+        "name": "Living Room",
+        "icon": "🛋️",
+        "deviceIds": [
+            "light-1",
+            "climate-1",
+            "fan-1",
+            "plug-1",
+            "blind-1",
+            "security-1"
+        ],
+        "activeDevicesCount": 4,
+        "totalDevicesCount": 6,
+        "color": "#3b82f6"
+    },
+    {
+        "id": "bedroom",
+        "name": "Bedroom",
+        "icon": "🛏️",
+        "deviceIds": [
+            "light-2",
+            "climate-2",
+            "fan-2"
+        ],
+        "activeDevicesCount": 3,
+        "totalDevicesCount": 3,
+        "color": "#8b5cf6"
+    },
+    {
+        "id": "kitchen",
+        "name": "Kitchen",
+        "icon": "🍳",
+        "deviceIds": [
+            "light-3"
+        ],
+        "activeDevicesCount": 0,
+        "totalDevicesCount": 1,
+        "color": "#f59e0b"
+    },
+    {
+        "id": "garage",
+        "name": "Garage",
+        "icon": "🚗",
+        "deviceIds": [
+            "camera-2"
+        ],
+        "activeDevicesCount": 1,
+        "totalDevicesCount": 1,
+        "color": "#64748b"
+    },
+    {
+        "id": "outdoor",
+        "name": "Outdoor",
+        "icon": "🌳",
+        "deviceIds": [
+            "camera-1",
+            "camera-3",
+            "gate-1"
+        ],
+        "activeDevicesCount": 2,
+        "totalDevicesCount": 3,
+        "color": "#10b981"
+    },
+    {
+        "id": "hallway",
+        "name": "Hallway",
+        "icon": "🚪",
+        "deviceIds": [
+            "lock-1"
+        ],
+        "activeDevicesCount": 1,
+        "totalDevicesCount": 1,
+        "color": "#ec4899"
+    }
+]

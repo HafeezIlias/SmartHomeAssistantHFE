@@ -1,0 +1,235 @@
+[
+    {
+        "id": "scene-1",
+        "name": "Good Morning",
+        "icon": "🌅",
+        "color": "#f59e0b",
+        "description": "Gradual lights, open blinds, comfortable temperature",
+        "isFavorite": true,
+        "category": "morning",
+        "actions": [
+            {
+                "deviceId": "blind-1",
+                "action": "setPosition",
+                "params": {
+                    "position": 100
+                }
+            },
+            {
+                "deviceId": "light-1",
+                "action": "turnOn",
+                "params": {
+                    "brightness": 70
+                }
+            },
+            {
+                "deviceId": "climate-1",
+                "action": "setMode",
+                "params": {
+                    "mode": "cool",
+                    "temperature": 23
+                }
+            }
+        ]
+    },
+    {
+        "id": "scene-2",
+        "name": "Leaving Home",
+        "icon": "🚶",
+        "color": "#6b7280",
+        "description": "Turn off all devices, arm security, close gate",
+        "isFavorite": true,
+        "category": "leaving",
+        "actions": [
+            {
+                "deviceId": "light-1",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "light-2",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "light-3",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "climate-1",
+                "action": "setMode",
+                "params": {
+                    "mode": "off"
+                }
+            },
+            {
+                "deviceId": "climate-2",
+                "action": "setMode",
+                "params": {
+                    "mode": "off"
+                }
+            },
+            {
+                "deviceId": "security-1",
+                "action": "arm",
+                "params": {
+                    "mode": "armed-away"
+                }
+            },
+            {
+                "deviceId": "gate-1",
+                "action": "close"
+            }
+        ]
+    },
+    {
+        "id": "scene-3",
+        "name": "Arriving Home",
+        "icon": "🏠",
+        "color": "#10b981",
+        "description": "Lights on, comfortable climate, disarm security",
+        "isFavorite": true,
+        "category": "arriving",
+        "actions": [
+            {
+                "deviceId": "gate-1",
+                "action": "open"
+            },
+            {
+                "deviceId": "light-1",
+                "action": "turnOn",
+                "params": {
+                    "brightness": 80
+                }
+            },
+            {
+                "deviceId": "climate-1",
+                "action": "setMode",
+                "params": {
+                    "mode": "cool",
+                    "temperature": 23
+                }
+            },
+            {
+                "deviceId": "security-1",
+                "action": "disarm"
+            }
+        ]
+    },
+    {
+        "id": "scene-4",
+        "name": "Movie Night",
+        "icon": "🎬",
+        "color": "#8b5cf6",
+        "description": "Dim lights, close blinds, optimal temperature",
+        "isFavorite": true,
+        "category": "entertainment",
+        "actions": [
+            {
+                "deviceId": "light-1",
+                "action": "turnOn",
+                "params": {
+                    "brightness": 20,
+                    "color": "#6b5b95"
+                }
+            },
+            {
+                "deviceId": "blind-1",
+                "action": "setPosition",
+                "params": {
+                    "position": 0
+                }
+            },
+            {
+                "deviceId": "climate-1",
+                "action": "setMode",
+                "params": {
+                    "mode": "cool",
+                    "temperature": 22
+                }
+            }
+        ]
+    },
+    {
+        "id": "scene-5",
+        "name": "Sleep Mode",
+        "icon": "🌙",
+        "color": "#1e293b",
+        "description": "All lights off, doors locked, security armed",
+        "isFavorite": true,
+        "category": "night",
+        "actions": [
+            {
+                "deviceId": "light-1",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "light-2",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "light-3",
+                "action": "turnOff"
+            },
+            {
+                "deviceId": "lock-1",
+                "action": "lock"
+            },
+            {
+                "deviceId": "climate-2",
+                "action": "setMode",
+                "params": {
+                    "mode": "cool",
+                    "temperature": 21
+                }
+            },
+            {
+                "deviceId": "fan-2",
+                "action": "setMode",
+                "params": {
+                    "mode": "sleep",
+                    "speed": 30
+                }
+            },
+            {
+                "deviceId": "security-1",
+                "action": "arm",
+                "params": {
+                    "mode": "armed-home"
+                }
+            }
+        ]
+    },
+    {
+        "id": "scene-6",
+        "name": "Work From Home",
+        "icon": "💼",
+        "color": "#3b82f6",
+        "description": "Optimal lighting and climate for productivity",
+        "isFavorite": false,
+        "category": "work",
+        "actions": [
+            {
+                "deviceId": "light-1",
+                "action": "turnOn",
+                "params": {
+                    "brightness": 100,
+                    "temperature": 5000
+                }
+            },
+            {
+                "deviceId": "climate-1",
+                "action": "setMode",
+                "params": {
+                    "mode": "cool",
+                    "temperature": 22
+                }
+            },
+            {
+                "deviceId": "fan-1",
+                "action": "setSpeed",
+                "params": {
+                    "speed": 40
+                }
+            }
+        ]
+    }
+]

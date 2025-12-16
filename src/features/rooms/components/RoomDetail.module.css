@@ -1,0 +1,182 @@
+.container {
+    padding: var(--space-6);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-6));
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.roomIcon {
+    font-size: 32px;
+}
+
+.header h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.devicesGrid {
+    display: grid;
+    gap: var(--space-4);
+}
+
+.deviceCard {
+    animation: slideUp var(--transition-base);
+}
+
+.deviceHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-3);
+}
+
+.deviceHeader>div {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.deviceIcon {
+    font-size: 24px;
+}
+
+.deviceName {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+}
+
+.deviceControls {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.controlLabel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.slider {
+    width: 100%;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--bg-tertiary);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-primary-500);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-primary-500);
+    cursor: pointer;
+    border: none;
+    box-shadow: var(--shadow-md);
+}
+
+.tempControl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+.tempDisplay {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    min-width: 100px;
+    text-align: center;
+}
+
+.subtext {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.status {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.status.recording {
+    background: var(--status-alert);
+    color: white;
+}
+
+.cameraFeatures {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+}
+
+.feature {
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.gateStatus {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    background: var(--status-on);
+    color: white;
+}
+
+.gateControls {
+    margin-top: var(--space-4);
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--space-12);
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .devicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

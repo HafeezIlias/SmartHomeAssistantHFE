@@ -1,0 +1,131 @@
+.container {
+    padding: var(--space-6);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-6));
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: var(--space-8);
+}
+
+.header h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.header p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+}
+
+.section {
+    margin-bottom: var(--space-8);
+}
+
+.sectionTitle {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+}
+
+.themeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+}
+
+.themeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition-base);
+}
+
+.themeCard.active {
+    border-color: var(--color-primary-500);
+    background: var(--bg-tertiary);
+}
+
+.themeIcon {
+    font-size: 32px;
+}
+
+.themeLabel {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.menuLink {
+    text-decoration: none;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+}
+
+.menuLeft {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.menuIcon {
+    font-size: 24px;
+}
+
+.menuLabel {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.menuRight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.menuBadge {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+}
+
+.menuArrow {
+    font-size: var(--font-size-lg);
+    color: var(--text-tertiary);
+}
+
+.appInfo {
+    text-align: center;
+    margin-top: var(--space-12);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-color);
+}
+
+.appInfo p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-1);
+}
+
+.subtext {
+    color: var(--text-tertiary);
+}

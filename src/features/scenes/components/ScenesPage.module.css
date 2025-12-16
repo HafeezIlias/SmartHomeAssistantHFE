@@ -1,0 +1,82 @@
+.container {
+    padding: var(--space-6);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--space-6));
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: var(--space-8);
+}
+
+.header h1 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.header p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+}
+
+.scenesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.sceneCard {
+    position: relative;
+    text-align: center;
+    animation: fadeIn var(--transition-base);
+}
+
+.sceneIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto var(--space-4);
+}
+
+.sceneName {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.sceneDescription {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-4);
+    line-height: var(--line-height-normal);
+}
+
+.activateButton {
+    margin-top: var(--space-2);
+}
+
+.favoriteBadge {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .scenesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .scenesGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

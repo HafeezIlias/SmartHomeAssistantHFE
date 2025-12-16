@@ -1,0 +1,94 @@
+.toggleContainer {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    cursor: pointer;
+}
+
+.toggleContainer.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.label {
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+    user-select: none;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    border-radius: var(--radius-full);
+    background: var(--status-off);
+    transition: all var(--transition-base);
+}
+
+.input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: all var(--transition-base);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Sizes */
+.sm {
+    width: 40px;
+    height: 24px;
+}
+
+.sm .slider {
+    width: 20px;
+    height: 20px;
+}
+
+.md {
+    width: 52px;
+    height: 30px;
+}
+
+.md .slider {
+    width: 26px;
+    height: 26px;
+}
+
+.lg {
+    width: 64px;
+    height: 36px;
+}
+
+.lg .slider {
+    width: 32px;
+    height: 32px;
+}
+
+/* Checked state */
+.checked {
+    background: var(--status-on);
+}
+
+.sm.checked .slider {
+    transform: translateX(16px);
+}
+
+.md.checked .slider {
+    transform: translateX(22px);
+}
+
+.lg.checked .slider {
+    transform: translateX(28px);
+}
+
+.toggle:hover:not(.disabled) {
+    opacity: 0.9;
+}

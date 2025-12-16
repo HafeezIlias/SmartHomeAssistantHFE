@@ -1,0 +1,124 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+    outline: none;
+    font-family: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.button:active::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* Sizes */
+.sm {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+    min-height: 32px;
+}
+
+.md {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+    min-height: 44px;
+}
+
+.lg {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-lg);
+    min-height: 52px;
+}
+
+/* Variants */
+.primary {
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.primary:hover:not(.disabled) {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.primary:active:not(.disabled) {
+    transform: translateY(0);
+}
+
+.secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.secondary:hover:not(.disabled) {
+    background: var(--bg-tertiary);
+    border-color: var(--border-color-hover);
+}
+
+.icon {
+    background: transparent;
+    color: var(--text-secondary);
+    padding: var(--space-2);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.icon:hover:not(.disabled) {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.text {
+    background: transparent;
+    color: var(--color-primary-500);
+    padding: var(--space-2) var(--space-3);
+}
+
+.text:hover:not(.disabled) {
+    background: var(--bg-tertiary);
+}
+
+/* States */
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+/* Icon */
+.icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
